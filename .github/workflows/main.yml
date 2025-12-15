@@ -1,0 +1,35 @@
+Activé :
+Push :
+Branches :
+
+main
+Pull_request :
+Branches :
+
+main
+
+Tâches :
+Build :
+Système d'exécution : ubuntu-latest
+
+Stratégie :
+Matrice :
+Version Node : [20.x]
+
+Étapes :
+
+Nom : Extraire le dépôt
+Utilise : actions/checkout@v3
+
+Nom : Configurer Node.js
+Utilise : actions/setup-node@v3
+
+Avec :
+
+Version Node : ${{ matrix.node-version }}
+
+Nom : Installer les dépendances
+Exécuter : npm install
+
+Nom : Démarrer l'application
+Exécuter : npm start
